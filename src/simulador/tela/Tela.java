@@ -20,15 +20,18 @@ public class Tela extends javax.swing.JFrame {
     Memoria mem;
     Registradores registradores;
     
-    /**
-     * Construtor da tela
-     */
+    //Construtor da tela
+    
     public Tela() {
         pc = new PC();
         ri = new RI();
+        registradores = new Registradores();
+        //TESTE
+        registradores.getRegistradores(0).setConteudo(10);
+        registradores.getRegistradores(1).setConteudo(7);
+        //FIM DO TESTE
         uc = new UC();
         mem = new Memoria();
-        registradores = new Registradores();
         initComponents();
         atualizarTela();
     }
@@ -960,7 +963,7 @@ public class Tela extends javax.swing.JFrame {
         ri.setConteudo(mem.getCelulas(pc.getContador()));
         
         //Envia a instrução do RI para a UC e lá decodifica a instrução
-        uc.interpretador(ri.getConteudo());
+        uc.interpretador(ri.getConteudo(), registradores);
         
         //Incrementa PC e atualiza a tela
         pc.somar();
