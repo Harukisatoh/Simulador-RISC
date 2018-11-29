@@ -3,7 +3,9 @@ package simulador.memoria;
 
 /**
  *
- * @author Haruki
+ * @author Gabriel Haruki
+ * @author Arthur Diniz
+ * @author Fernando Masuda
  */
 
 public class Memoria {

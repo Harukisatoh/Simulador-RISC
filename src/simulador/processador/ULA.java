@@ -6,7 +6,9 @@ import simulador.memoria.Memoria;
 
 /**
  *
- * @author Haruki
+ * @author Gabriel Haruki
+ * @author Arthur Diniz
+ * @author Fernando Masuda
  */
 
 public class ULA {
@@ -84,6 +86,31 @@ public class ULA {
             operando1.setConteudo(bd.floatValue());
         }
         
+    }
+    
+    //Função que pula para um endereço de memória
+    public void jmp(PC pc, int pos) {
+        pc.setContador(pos);
+    }
+    
+    //Função que se desloca para outro endereço de memória
+    public void branch(PC pc, int offset) {
+        
+        //Verifica se o deslocamento é maior, menor ou igual a 0
+        if (offset < 0) {
+            //Decrementa contador
+            for(int i = offset; i <= 0; i++) {
+                pc.subtrair();
+            }
+        } else if(offset > 0) {
+            //Incrementa contador
+            for(int i = offset; i > 1; i--) {
+                pc.somar();
+            }
+        } else {
+            //Contador continua com o mesmo valor
+            pc.setContador(offset - 1);
+        }
     }
     
 }

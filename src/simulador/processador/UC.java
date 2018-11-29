@@ -4,7 +4,9 @@ import simulador.memoria.Memoria;
 
 /**
  *
- * @author Haruki
+ * @author Gabriel Haruki
+ * @author Arthur Diniz
+ * @author Fernando Masuda
  */
 
 public class UC {
@@ -17,7 +19,7 @@ public class UC {
     }
 
     //Decodifica e interpreta a instrução
-    public void interpretador(String instrucao, Registradores registradores, Memoria mem) {
+    public void interpretador(String instrucao, Registradores registradores, Memoria mem, PC pc) {
 
         //Divide a instrução em termos
         String termos[] = instrucao.split(" ");
@@ -25,10 +27,20 @@ public class UC {
         //Verifica qual instrução está sendo executada
         switch (termos[0]) {
             case "load":
-                ula.load(encontraRegistrador(termos[1], registradores), mem.getCelulas(encontraMemoria(termos[2])));
+                //Verifica se o endereço de memória digitado é válido
+                try {
+                    ula.load(encontraRegistrador(termos[1], registradores), mem.getCelulas(encontraMemoria(termos[2])));
+                } catch(ArrayIndexOutOfBoundsException e) {
+                    System.out.println("ERRO: POSIÇÃO DE MEMÓRIA NÃO ENCONTRADA");
+                }
                 break;
             case "store":
-                ula.store(mem, encontraMemoria(termos[1]), encontraRegistrador(termos[2], registradores));
+                //Verifica se o endereço de memória digitado é válido
+                try {
+                    ula.store(mem, encontraMemoria(termos[1]), encontraRegistrador(termos[2], registradores));
+                } catch (ArrayIndexOutOfBoundsException e){
+                    System.out.println("ERRO: POSIÇÃO DE MEMÓRIA NÃO ENCONTRADA");
+                }
                 break;
             case "add":
                 ula.add(encontraRegistrador(termos[1], registradores), encontraRegistrador(termos[2], registradores));
@@ -42,6 +54,16 @@ public class UC {
             case "div":
                 ula.div(encontraRegistrador(termos[1], registradores), encontraRegistrador(termos[2], registradores));
                 break;
+            case "jmp":
+                ula.jmp(pc, encontraMemoria(termos[1]) - 1);
+                break;
+            case "branch":
+                int i = Integer.parseInt(termos[1]);
+                ula.branch(pc, i);
+                break;
+            default:
+                System.out.println("ERRO: OPERAÇÃO NÃO RECONHECIDA");
+                    break;
         }
 
     }

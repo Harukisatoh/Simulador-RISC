@@ -8,7 +8,9 @@ import simulador.processador.UC;
 
 /**
  *
- * @author Haruki
+ * @author Gabriel Haruki
+ * @author Arthur Diniz
+ * @author Fernando Masuda
  */
 
 public class Tela extends javax.swing.JFrame {
@@ -26,10 +28,6 @@ public class Tela extends javax.swing.JFrame {
         pc = new PC();
         ri = new RI();
         registradores = new Registradores();
-        //TESTE
-        registradores.getRegistradores(0).setConteudo(10);
-        registradores.getRegistradores(1).setConteudo(7);
-        //FIM DO TESTE
         uc = new UC();
         mem = new Memoria();
         initComponents();
@@ -378,28 +376,28 @@ public class Tela extends javax.swing.JFrame {
         txtMemoria8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         lblMemoria8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblMemoria8.setText("8");
+        lblMemoria8.setText("m8");
 
         txtMemoria9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         lblMemoria9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblMemoria9.setText("9");
+        lblMemoria9.setText("m9");
 
         lblMemoria11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblMemoria11.setText("11");
+        lblMemoria11.setText("m11");
 
         txtMemoria11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         txtMemoria10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         lblMemoria10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblMemoria10.setText("10");
+        lblMemoria10.setText("m10");
 
         lblMemoria15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblMemoria15.setText("15");
+        lblMemoria15.setText("m15");
 
         lblMemoria14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblMemoria14.setText("14");
+        lblMemoria14.setText("m14");
 
         txtMemoria15.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
@@ -408,52 +406,52 @@ public class Tela extends javax.swing.JFrame {
         txtMemoria13.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         lblMemoria13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblMemoria13.setText("13");
+        lblMemoria13.setText("m13");
 
         txtMemoria12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         lblMemoria12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblMemoria12.setText("12");
+        lblMemoria12.setText("m12");
 
         txtMemoria7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         lblMemoria7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblMemoria7.setText("7");
+        lblMemoria7.setText("m7");
 
         txtMemoria6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         lblMemoria6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblMemoria6.setText("6");
+        lblMemoria6.setText("m6");
 
         txtMemoria5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         lblMemoria5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblMemoria5.setText("5");
+        lblMemoria5.setText("m5");
 
         txtMemoria4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         lblMemoria4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblMemoria4.setText("4");
+        lblMemoria4.setText("m4");
 
         txtMemoria3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         lblMemoria3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblMemoria3.setText("3");
+        lblMemoria3.setText("m3");
 
         txtMemoria2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         lblMemoria2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblMemoria2.setText("2");
+        lblMemoria2.setText("m2");
 
         txtMemoria1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         lblMemoria1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblMemoria1.setText("1");
+        lblMemoria1.setText("m1");
 
         txtMemoria0.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         lblMemoria0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblMemoria0.setText("0");
+        lblMemoria0.setText("m0");
 
         lblMemorias.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblMemorias.setText("Memórias");
@@ -962,8 +960,8 @@ public class Tela extends javax.swing.JFrame {
         //Busca a instrução e armazena no RI
         ri.setConteudo(mem.getCelulas(pc.getContador()));
         
-        //Envia a instrução do RI para a UC e lá decodifica a instrução
-        uc.interpretador(ri.getConteudo(), registradores, mem);
+        //Envia a instrução do RI para a UC e lá decodifica a instrução e executa a instrução
+        uc.interpretador(ri.getConteudo(), registradores, mem, pc);
         
         //Incrementa PC e atualiza a tela
         pc.somar();

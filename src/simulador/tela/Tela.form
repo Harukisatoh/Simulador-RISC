@@ -1064,7 +1064,7 @@
     <Component class="javax.swing.JLabel" name="lblMemoria8">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="8"/>
+        <Property name="text" type="java.lang.String" value="m8"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtMemoria9">
@@ -1075,13 +1075,13 @@
     <Component class="javax.swing.JLabel" name="lblMemoria9">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="9"/>
+        <Property name="text" type="java.lang.String" value="m9"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblMemoria11">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="11"/>
+        <Property name="text" type="java.lang.String" value="m11"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtMemoria11">
@@ -1097,19 +1097,19 @@
     <Component class="javax.swing.JLabel" name="lblMemoria10">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="10"/>
+        <Property name="text" type="java.lang.String" value="m10"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblMemoria15">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="15"/>
+        <Property name="text" type="java.lang.String" value="m15"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblMemoria14">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="14"/>
+        <Property name="text" type="java.lang.String" value="m14"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtMemoria15">
@@ -1130,7 +1130,7 @@
     <Component class="javax.swing.JLabel" name="lblMemoria13">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="13"/>
+        <Property name="text" type="java.lang.String" value="m13"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtMemoria12">
@@ -1141,7 +1141,7 @@
     <Component class="javax.swing.JLabel" name="lblMemoria12">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="12"/>
+        <Property name="text" type="java.lang.String" value="m12"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtMemoria7">
@@ -1152,7 +1152,7 @@
     <Component class="javax.swing.JLabel" name="lblMemoria7">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="7"/>
+        <Property name="text" type="java.lang.String" value="m7"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtMemoria6">
@@ -1163,7 +1163,7 @@
     <Component class="javax.swing.JLabel" name="lblMemoria6">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="6"/>
+        <Property name="text" type="java.lang.String" value="m6"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtMemoria5">
@@ -1174,7 +1174,7 @@
     <Component class="javax.swing.JLabel" name="lblMemoria5">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="5"/>
+        <Property name="text" type="java.lang.String" value="m5"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtMemoria4">
@@ -1185,7 +1185,7 @@
     <Component class="javax.swing.JLabel" name="lblMemoria4">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="4"/>
+        <Property name="text" type="java.lang.String" value="m4"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtMemoria3">
@@ -1196,7 +1196,7 @@
     <Component class="javax.swing.JLabel" name="lblMemoria3">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="3"/>
+        <Property name="text" type="java.lang.String" value="m3"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtMemoria2">
@@ -1207,7 +1207,7 @@
     <Component class="javax.swing.JLabel" name="lblMemoria2">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="2"/>
+        <Property name="text" type="java.lang.String" value="m2"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtMemoria1">
@@ -1218,7 +1218,7 @@
     <Component class="javax.swing.JLabel" name="lblMemoria1">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="1"/>
+        <Property name="text" type="java.lang.String" value="m1"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtMemoria0">
@@ -1229,7 +1229,7 @@
     <Component class="javax.swing.JLabel" name="lblMemoria0">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="0"/>
+        <Property name="text" type="java.lang.String" value="m0"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JSeparator" name="jSeparator2">

@@ -2,7 +2,9 @@ package simulador.processador;
 
 /**
  *
- * @author Haruki
+ * @author Gabriel Haruki
+ * @author Arthur Diniz
+ * @author Fernando Masuda
  */
 
 public class PC {
@@ -35,6 +37,17 @@ public class PC {
         
         //Incrementa contador
         contador++;
+    }
+    
+    //Função que decrementa contador
+    public void subtrair() {
+        //Verifica se a já percorreu todas as células da memória
+        if (contador == 0) {
+            contador = 16;
+        }
+        
+        //Decrementa contador
+        contador--;
     }
     
 }
