@@ -963,7 +963,7 @@ public class Tela extends javax.swing.JFrame {
         ri.setConteudo(mem.getCelulas(pc.getContador()));
         
         //Envia a instrução do RI para a UC e lá decodifica a instrução
-        uc.interpretador(ri.getConteudo(), registradores);
+        uc.interpretador(ri.getConteudo(), registradores, mem);
         
         //Incrementa PC e atualiza a tela
         pc.somar();

@@ -1,9 +1,12 @@
 package simulador.processador;
 
+import simulador.memoria.Memoria;
+
 /**
  *
  * @author Haruki
  */
+
 public class UC {
 
     ULA ula;
@@ -14,29 +17,36 @@ public class UC {
     }
 
     //Decodifica e interpreta a instrução
-    public void interpretador(String instrucao, Registradores registradores) {
+    public void interpretador(String instrucao, Registradores registradores, Memoria mem) {
 
         //Divide a instrução em termos
         String termos[] = instrucao.split(" ");
 
         //Verifica qual instrução está sendo executada
         switch (termos[0]) {
+            case "load":
+                ula.load(encontraRegistrador(termos[1], registradores), mem.getCelulas(encontraMemoria(termos[2])));
+                break;
+            case "store":
+                ula.store(mem, encontraMemoria(termos[1]), encontraRegistrador(termos[2], registradores));
+                break;
             case "add":
                 ula.add(encontraRegistrador(termos[1], registradores), encontraRegistrador(termos[2], registradores));
                 break;
             case "sub":
-
+                ula.sub(encontraRegistrador(termos[1], registradores), encontraRegistrador(termos[2], registradores));
                 break;
             case "mul":
-
+                ula.mul(encontraRegistrador(termos[1], registradores), encontraRegistrador(termos[2], registradores));
                 break;
             case "div":
-
+                ula.div(encontraRegistrador(termos[1], registradores), encontraRegistrador(termos[2], registradores));
                 break;
         }
 
     }
 
+    //Função usada pra converter String para a referência de um Registrador
     public Registrador encontraRegistrador(String nome, Registradores registradores) {
         switch (nome) {
             case "r0":
@@ -105,6 +115,46 @@ public class UC {
                 return (registradores.getRegistradores(31));
             default:
                 return null;
+        }
+    }
+    
+    //Função usada pra converter String para a referência de uma célula de Memoria (int)
+    public int encontraMemoria(String nome) {
+        switch (nome) {
+            case "m0":
+                return (0);
+            case "m1":
+                return (1);
+            case "m2":
+                return (2);
+            case "m3":
+                return (3);
+            case "m4":
+                return (4);
+            case "m5":
+                return (5);
+            case "m6":
+                return (6);
+            case "m7":
+                return (7);
+            case "m8":
+                return (8);
+            case "m9":
+                return (9);
+            case "m10":
+                return (10);
+            case "m11":
+                return (11);
+            case "m12":
+                return (12);
+            case "m13":
+                return (13);
+            case "m14":
+                return (14);
+            case "m15":
+                return (15);
+            default:
+                return -1;
         }
     }
 
